@@ -1,9 +1,3 @@
-
-if [ -t 1 ]; then
-exec zsh
-fi
-
-
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -130,5 +124,34 @@ alias cd_onedrive="cd /mnt/c/Users/alexsuspis/onedrive/"
 export DISPLAY=localhost:0.0
 
 
-DISPLAY=:0.0
+#export PATH=/home/alex/anaconda3/bin:$PATH
+
+
+
+DISPLA=Y:0.0
 export DISPLAY
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+#__conda_setup="$('/home/alex/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else
+#    if [ -f "/home/alex/anaconda3/etc/profile.d/conda.sh" ]; then
+#        . "/home/alex/anaconda3/etc/profile.d/conda.sh"
+#    else
+#        export PATH="/home/alex/anaconda3/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
+# <<< conda initialize <<<
+
+# added by Anaconda3 installer
+export PATH="/home/alex/anaconda3/bin:$PATH"
+
+
+#Launch zsh
+if [ -t 1 ]; then
+	exec zsh
+fi
+
